@@ -74,7 +74,7 @@ async function runSmoke() {
   });
   await new Promise((resolveListen, rejectListen) => {
     server.once('error', rejectListen);
-    server.listen(0, '127.0.0.1', () => resolveListen());
+    server.listen(0, '127.0.0.1', () => resolveListen(undefined));
   });
 
   /** @type {import('playwright').Browser | null} */
@@ -140,7 +140,7 @@ async function runSmoke() {
     console.log(`Smoke passed; screenshot saved to ${SCREENSHOT_PATH}`);
   } finally {
     if (browser) await browser.close();
-    await new Promise(resolveClose => server.close(() => resolveClose()));
+    await new Promise(resolveClose => server.close(() => resolveClose(undefined)));
   }
 }
 

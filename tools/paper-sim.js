@@ -85,7 +85,7 @@ function hireCrew(crewId, time_s, crewCounts, stocks, events, lodgeLevel) {
   recordEvent(time_s, 'PURCHASE', `Hire ${crewId} for ${cost} Timber`, events);
 }
 
-/** @param {number} time_s @param {Map<string, number>} crewCounts @param {{timber: number, mud: number, stone: number}} stocks @param {SimEvent[]} events @returns {number} */
+/** @param {number} time_s @param {Map<string, number>} crewCounts @param {{timber: number, mud: number, stone: number}} stocks @param {SimEvent[]} events @param {number} lodgeLevel @returns {number} */
 function buyLodgeLevel(time_s, crewCounts, stocks, events, lodgeLevel) {
   const cost = lodgeUpgradeCost(lodgeLevel);
   if (stocks.timber < cost) return lodgeLevel;

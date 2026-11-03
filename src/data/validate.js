@@ -43,7 +43,7 @@ function asRecord(value, path) {
  * @param {string[]} [optional]
  */
 function assertKeys(value, required, path, optional) {
-  const allowed = new Set([...required, ...optional]);
+  const allowed = new Set([...required, ...(optional ?? [])]);
   const keys = Object.keys(value);
   for (const key of keys) {
     if (!allowed.has(key)) throw new Error(`Unknown key '${key}' at ${path}`);
@@ -68,11 +68,11 @@ function assertString(value, path) {
  * @returns {number}
  */
 function assertNumber(value, path, options) {
-  const min = options.min ?? Number.NEGATIVE_INFINITY;
+  const min = options?.min ?? Number.NEGATIVE_INFINITY;
   if (typeof value !== 'number' || !Number.isFinite(value)) {
     throw new Error(`Expected finite number at ${path}`);
   }
-  if (options.integer === true && !Number.isInteger(value)) {
+  if (options?.integer === true && !Number.isInteger(value)) {
     throw new Error(`Expected integer at ${path}`);
   }
   if (value < min) throw new Error(`Number below ${min} at ${path}`);
