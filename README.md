@@ -26,4 +26,3 @@ Commands: `npm i` then `npm test`, `npm run typecheck`, `npm run sim`, `npm run 
 - Formatting: `.editorconfig` sets UTF-8, LF, 2-space indentation, final newlines, and trims trailing whitespace for the listed source and documentation files.
 - CI: `.github/workflows/ci.yml` runs tests, typechecking, and the Playwright smoke check on configured branches.
 - These are repository conventions. Server-side branch protection must be configured separately in the Git host.
-

@@ -1,0 +1,76 @@
+[
+  {
+    "id": "R01",
+    "trigger": {
+      "siltLifetime": 15
+    },
+    "speaker": "CREW_DIGGER",
+    "lines": [
+      "Pulled an ironwood pile out of the bottom silt. Incisor marks all over the butt end.",
+      "Not your teeth, FOREMAN. That timber was felled over a century ago and cured in salt.",
+      "Whoever built the first wall here knew how to notch a sill."
+    ],
+    "sets": [
+      "RELIC_R01_FOUND"
+    ],
+    "requires": [],
+    "clue": "Beavers were hired to dam this exact gorge long before FOREMAN arrived."
+  },
+  {
+    "id": "R02",
+    "trigger": {
+      "siltLifetime": 40
+    },
+    "speaker": "CREW_WATCHER",
+    "lines": [
+      "Listen to the backwash when the surge drops off row zero.",
+      "Open water doesn't echo on a seventy-five-second beat like that. A basin does.",
+      "The water isn't pushing the wall, boss. It's pacing the room."
+    ],
+    "sets": [
+      "RELIC_R02_FOUND"
+    ],
+    "requires": [
+      "RELIC_R01_FOUND"
+    ],
+    "clue": "The tide's rhythm behaves like water resonating inside an enclosed basin, not an open coast."
+  },
+  {
+    "id": "R03",
+    "trigger": {
+      "siltLifetime": 80
+    },
+    "speaker": "FOREMAN",
+    "lines": [
+      "An oiled linen survey chart rolled inside a brass tube. The eastern margin has been sheared off with scissors.",
+      "If you lay the valley orchard contours against the outer headland, the elevation lines lock together.",
+      "The thirty-foot contour in the village is the old high-water mark."
+    ],
+    "sets": [
+      "RELIC_R03_FOUND"
+    ],
+    "requires": [
+      "RELIC_R02_FOUND"
+    ],
+    "clue": "The valley's topography matches the outer coastline; someone trimmed the official map to hide it."
+  },
+  {
+    "id": "R04",
+    "trigger": {
+      "siltLifetime": 140
+    },
+    "speaker": "CREW_MASON",
+    "lines": [
+      "Slate tally board wedged under a ruin course. Four hundred clean tides scratched in neat rows of five.",
+      "Stops halfway through a fifth stroke. Chisel's still sitting beside it, wrapped in oiled rag.",
+      "The wall didn't break on them. They just stopped counting."
+    ],
+    "sets": [
+      "RELIC_R04_FOUND"
+    ],
+    "requires": [
+      "RELIC_R03_FOUND"
+    ],
+    "clue": "An earlier foreman did not fail or drown; they deliberately walked off the job mid-tide."
+  }
+]

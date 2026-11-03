@@ -1,0 +1,20 @@
+{
+  "name": "overflow",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "description": "Overflow: a beaver foreman holds back the ocean. Deterministic incremental game, plain ES modules, zero runtime dependencies.",
+  "scripts": {
+    "test": "node --test tests/*.test.js",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "sim": "node tools/sim.js 6 20",
+    "probe": "node tools/probe.js",
+    "cascade": "node tools/cascade.js",
+    "smoke": "node tools/smoke.js"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "playwright": "^1.48.0",
+    "typescript": "^5.9.3"
+  }
+}
