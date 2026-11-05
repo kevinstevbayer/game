@@ -1,4 +1,5 @@
 # CHANGELOG
+- P3-5 dependency lint: added `tools/check-deps.js` (enforcing `data <- core <- app <- view` layer direction and rejecting banned identifiers in `src/core/**` with template-expression-aware string/comment stripping), `tests/check-deps.test.js`, and `"lint:deps"` in `package.json`.
 - P3-4 smoke: added `tools/smoke.js` to check page errors, canvas boot, 120 animation frames, arrow-key square movement, and save `test-results/smoke.png`; activated the required CI smoke step and added boot-only ArrowRight movement.
 - P3-3 fixed loop: added `src/app/loop.js` (30 Hz fixed accumulator, 0.25 s frame cap, pure non-mutating `computeLoopStep`, raw-delta FPS, stoppable RAF harness) and `tests/loop.test.js`; wired F3 toggle and loop into `src/main.js`.
 - P3-2 boot: added `index.html`, `style.css`, and `src/main.js` (320x180 canvas using `SCREEN_WIDTH_PX`/`SCREEN_HEIGHT_PX`, integer scaling, pixelated rendering, and static boot square).

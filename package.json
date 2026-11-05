@@ -10,7 +10,8 @@
     "sim": "node tools/sim.js 6 20",
     "probe": "node tools/probe.js",
     "cascade": "node tools/cascade.js",
-    "smoke": "node tools/smoke.js"
+    "smoke": "node tools/smoke.js",
+    "lint:deps": "node tools/check-deps.js"
   },
   "devDependencies": {
     "@types/node": "^26.6.6",
