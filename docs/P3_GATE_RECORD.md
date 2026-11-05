@@ -1,6 +1,6 @@
 # P3 Gate Record: Technical Foundation (M0)
 
-**Phase Status:** GATE PENDING (awaiting integrator sign-off)
+**Phase Status:** GATE PENDING (checks passed and approved; waiting for the p3-lock tag to be published)
 
 ## 1. Deliverables Checklist (`docs/PHASES.md` P3)
 
@@ -24,10 +24,13 @@ The clean clone was checked out from `phase/p3` at commit `eb2cb843e40d94989da5e
 
 ## 3. GitHub Actions CI
 
-**Result:** **PASS** on commit `eb2cb843e40d94989da5ea98f2e9f9dd33f5cc27`.
+- **Push CI:** **PASS** on `fabe97e25cf38b3266a8b2f4e19df1a03615ccf4` ([run](https://github.com/kevinstevbayer/game/actions/runs/41990519959)).
+- **Pull request CI:** **PASS** on the same head ([run](https://github.com/kevinstevbayer/game/actions/runs/41994107245)).
+- **Post-merge CI:** **PASS** on merge commit `3a6d61367c82e9bb03b8bd8349ec1177b6210b44` ([run](https://github.com/kevinstevbayer/game/actions/runs/41994368380)).
 
-Run: https://github.com/kevinstevbayer/game/actions/runs/41989645174
+## 4. Lock Record
 
-## 4. Remaining Gate Item
-
-- **Integrator / Designer Sign-Off:** **PENDING**
+- **Integrator / Designer Sign-Off:** **APPROVED** on 2026-11-05.
+- **Merge to `main`:** completed at `3a6d61367c82e9bb03b8bd8349ec1177b6210b44`.
+- **Local tag:** annotated `p3-lock` created at the merge commit.
+- **Tag publication:** **PENDING**. Git Credential Manager failed in the agent environment while pushing the tag; the tag has not yet appeared on GitHub.
